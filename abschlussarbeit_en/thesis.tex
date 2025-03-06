@@ -1,0 +1,116 @@
+% Encoding: UTF-8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% $Id: thesis.tex 111 2015-10-06 12:55:56Z klugeflo $
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{sikthesis}
+%\documentclass[draft]{sikthesis}
+
+\usepackage[citestyle=alphabetic,
+  bibstyle=alphabetic,
+  backend=bibtex]{biblatex}
+\usepackage{textcomp} % special characters for the text, e.g. \textmu
+\usepackage{algpseudocode} % Pseudo code
+% Add additional necessary packages here
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Add additional necessary tikz packages here
+\usetikzlibrary{automata,positioning}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clubpenalty=10000
+\widowpenalty=10000
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% If you need additional commands this is the right place to define them
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Acronyms
+
+\DeclareAcronym{os}{
+  short = OS,
+  long = operating system
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Datei mit BibTeX entries
+\addbibresource{thesis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+% The general beginning part of the work is numbered with roman numerals.
+% The individual chapters in the initial part are included in the
+% table of contents, but are not numbered
+
+% Enter the information for your title page here
+\sikType{Bachelor Thesis} % Type of the thesis (Diplom/Bachelor/Master)
+\sikAuthor{Foo Bar} % Your name
+\sikTitle{Investigation of Synergy Effects in Complex Systems} % Title of the thesis
+\sikRefereeOne{Prof. Dr. Foo Bar} % First referee (= supervising Prof.)
+\sikRefereeTwo{Prof. Dr. Foo Bar} % Second referee
+\sikAdviser{Dr. Foo Bar} % Supervisor at the chair
+\sikDate{\today} % Submission date
+
+\sikTitlePage
+
+\include{abstract}
+
+\chapter{Foreword}
+You can optionally add a foreword to your thesis.
+
+% Table of contents
+\tableofcontents
+
+\mainmatter
+% This is the start of the actual thesis enumerated with arabic numbers.
+
+% By creating a separate file for each chapter it is easier to keep an overview.
+\include{introduction}
+\include{content}
+\include{latex}
+\include{conclusion}
+
+% Indices
+
+\listoffigures
+\listoftables
+\printbibliography[heading=bibintoc]
+
+% If necessary, you can add attachments here.
+% The appendix chapters are numbered with letters.
+% Here too each chapter should be in a separate file.
+
+\begin{appendix}
+\chapter{Appendix Chapter}
+If you want to include information in your paper that is only marginally
+relevant to the understanding of your work, create an appendix for this purpose.
+\section{foo}
+\section{bar}
+\chapter{Second Appendix Chapter}
+\end{appendix}
+
+\backmatter
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% End: 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%<!-- Local IspellDict: en -->
