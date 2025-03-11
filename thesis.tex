@@ -5,16 +5,14 @@
 % $Id: thesis.tex 111 2015-10-06 12:55:56Z klugeflo $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass{sikthesis}
+\documentclass[BCOR=10mm]{sikthesis}
 %\documentclass[draft]{sikthesis}
-
 \usepackage[citestyle=alphabetic,
   bibstyle=alphabetic,
   backend=bibtex]{biblatex}
 \usepackage{textcomp} % special characters for the text, e.g. \textmu
 \usepackage{algpseudocode} % Pseudo code
 % Add additional necessary packages here
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -62,8 +60,8 @@
 \sikAdviser{Victor Gerling} % Supervisor at the chair
 \sikDate{\today} % Submission date
 
-\sikTitlePage
 
+\sikTitlePage
 \include{abstract}
 
 \chapter{Foreword}
@@ -76,7 +74,7 @@ You can optionally add a foreword to your thesis.
 % This is the start of the actual thesis enumerated with arabic numbers.
 
 % By creating a separate file for each chapter it is easier to keep an overview.
-\include{introduction}
+%\include{introduction}
 \include{conclusion}
 
 % Indices

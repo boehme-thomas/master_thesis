@@ -14,11 +14,11 @@
 % \DeclareOption{a4paper}{\PassOptionsToClass{\CurrentOption}{scrreprt}}
 % \DeclareOption{12pt}{\PassOptionsToClass{\CurrentOption}{scrreprt}}
 % \DeclareOption{twoside}{\PassOptionsToClass{\CurrentOption}{scrreprt}}
-% \DeclareOption{twoside}{\PassOptionsToClass{\CurrentOption}{scrreprt}}
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{scrbook}}
-% \ExecuteOptions{a4paper,12pt,twoside}
+% \DeclareOption{twoside}{\PassOptionsToClass{\CurrentOption}{scrbook}}
+% \DeclareOption*{\PassOptionsToClass{\CurrentOption}{scrbook}}
+%\ExecuteOptions{a4paper,12pt,twoside}
 \ProcessOptions\relax
-\PassOptionsToClass{12pt,a4paper,bibliography=totoc,listof=totoc}{scrbook}
+\PassOptionsToClass{12pt,a4paper,bibliography=totoc,listof=totoc,twoside,openright}{scrbook}
 \LoadClass{scrbook}
 
  %% From here you can make changes to the macros of the loaded class
@@ -75,6 +75,8 @@
 \gdef\@sikDate{\datoday}
 
 \newcommand{\sikTitlePage}{
+	\begingroup
+	\KOMAoptions{twoside=false}
   \begin{titlepage}
     \begin{center}%
       {\huge \textsc{Institute of Computer Science }} \\[1em]%
@@ -106,6 +108,7 @@
       \null\vfill
     \end{center}\par
   \end{titlepage}
+  \endgroup
 
   \vspace*{\fill}
   \textit{written at the}\\
@@ -114,7 +117,7 @@
   Institute of Computer Science \\
   University of Augsburg \\
   86159 Augsburg, Germany \\
-  \url{https://www.uni-augsburg.de/informatik} \\
+  \url{https://www.uni-augsburg.de/informatik}
 }
 
 \newcommand\makedatitle{

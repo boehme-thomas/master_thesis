@@ -43,7 +43,7 @@
 
 
 \RequirePackage{libertine}
-\setmonofont{Inconsolata}
+\setmonofont{inconsolata}
 
 
 \RequirePackage{pdfpages}
